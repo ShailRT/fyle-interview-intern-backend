@@ -4,7 +4,7 @@ import os
 
 proc_name = 'fyle-interview-be'
 port_number = int(os.environ.get('GUNICORN_PORT', 7755))
-bind = '0.0.0.0:{0}'.format(port_number)
+bind = '127.0.0.1:{0}'.format(port_number)
 
 backlog      = int(os.environ.get('GUNICORN_BACKLOG', 50))
 workers      = int(os.environ.get('GUNICORN_NUMBER_WORKERS', 1))
@@ -27,7 +27,7 @@ spew = False
 
 daemon = False
 pidfile = None
-umask = 0
+umask = 0   
 user = None
 group = None
 tmp_upload_dir = None
