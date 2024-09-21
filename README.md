@@ -56,3 +56,17 @@ pytest -vvv -s tests/
 # pytest --cov
 # open htmlcov/index.html
 ```
+
+### Docker Build
+
+```
+docker build -t fyle .
+# after cd in to main directory
+```
+
+### Docker Run
+
+```
+docker container run -d -p 7755:7755 fyle
+# then type 0.0.0.0:7755 in browser
+```
